@@ -1,7 +1,9 @@
 Create/Update VM in Azure
 =========
 
-This Role creates/updates VM(s)
+This Role creates/updates VM(s) in Azure
+
+<https://docs.ansible.com/ansible/latest/modules/azure_rm_virtualmachine_module.html>
 
 Requirements
 ------------
