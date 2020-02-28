@@ -46,6 +46,8 @@ You can define the name of the NIC if it exists prior
 Example Playbook
 ----------------
 
+> Creating Multiple VM in one playbook
+
 ``` yaml
 ---
 - name: Azure Playbook creating multiple vm's
@@ -102,7 +104,9 @@ Example Playbook
   connection: local
   roles:
     - azure-virtualmachine
-```  
+```
+
+> Creating a VM using a preexisting NIC
 
 ``` yaml
 ---
