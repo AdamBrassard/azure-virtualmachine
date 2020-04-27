@@ -1,6 +1,8 @@
 Create/Update VM in Azure
 =========
 
+[![Build Status](https://travis-ci.org/AdamBrassard/azure-virtualmachine.svg?branch=master)](https://travis-ci.org/AdamBrassard/azure-virtualmachine)
+
 This Role creates/updates VM(s) in Azure
 
 <https://docs.ansible.com/ansible/latest/modules/azure_rm_virtualmachine_module.html>
