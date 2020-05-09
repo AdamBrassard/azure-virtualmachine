@@ -18,5 +18,5 @@ jobs:
     - name: ansible-lint
       uses: ansible/ansible-lint-action@v4.1.0.post0
       with:
-       targets: "{{ $GITHUB_WORKSPACE }}/tasks/"
+       targets: "/home/runner/work/azure-virtualmachine/azure-virtualmachine/tasks/main.yml"
        
