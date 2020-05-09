@@ -1,0 +1,22 @@
+name: VM_ANSIBLE_ACTION
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: 
+      - master
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: ansible-lint
+      uses: ansible/ansible-lint-action@151b9a2
+      with:
+       targets: "./"
+       
