@@ -16,7 +16,4 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: ansible-lint
-      uses: ansible-community/ansible-lint-action@main
-      with:
-       targets: "./"
-       
+      uses: ansible-community/ansible-lint-action@v6      
