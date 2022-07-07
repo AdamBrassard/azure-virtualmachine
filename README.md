@@ -14,12 +14,14 @@ Requires Azure_rm Module
 ansible >=2.8
 Tested in Ansible 2.13.1 
 
-Install the Azure Collection from Galaxy:
-
+**Install the Azure Collection from Galaxy:**
+```
 ansible-galaxy collection install azure.azcollection
-Install the Python requirement packages from the collection
-
+```
+**Install the Python requirement packages from the collection**
+```
 sudo pip3 install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
+```
 
 User Defined Role Variables
 --------------
@@ -52,7 +54,7 @@ vm:
 Dependencies
 ------------
 
-If you don't define the network_interface name it will create one as long as there is a network in the resource group.
+If you don't define the network_interface name it will create one as long as there is a network in the resource group. \
 You can define the name of the NIC if it exists prior
 
 Example Playbook
