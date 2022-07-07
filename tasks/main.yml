@@ -20,5 +20,6 @@
       sku: "{{ item.sku_name | default(omit, true) }}"
       version: "{{ item.sku_version | default(omit, true) }}"
     availability_set: "{{ item.avset_name | default(omit, true) }}"
+    public_ip_allocation_method: "{{ item.pubip | default('Disabled')}}"
   loop:
     "{{ vm }}"

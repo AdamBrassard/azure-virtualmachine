@@ -31,13 +31,13 @@ vm:
     sku_version: # Example: "latest" # Specific version of OS
     os_type: # Example: Windows, Linux
     managed_disk_type: # Type of storage for the managed disk: Standard_LRS or Premium_LRS. If not specified the disk is created Standard_LRS
-    os_disk_caching: #Type of OS disk caching. Set to 'ReadOnly' on default, can also be "ReadWrite". Does not need to be define if default is wished.
+    os_disk_caching: # Type of OS disk caching. Set to 'ReadOnly' on default, can also be "ReadWrite". Does not need to be define if default is wished.
     os_disk_size_gb: # The size of the disk with the OS on it, windows 2012 requires minumum 127 and will not allow override to lower  Does not need to be define if default is wished.
     vm_username: # Example: "azureadmin"
-    vm_password:  #Define a password
-    avset_name: #Define an availability set if desired. else this will be ignored
-    nic_name: #enter the name of an existing NIC
-
+    vm_password:  # Define a password
+    avset_name: # Define an availability set if desired. else this will be ignored
+    nic_name: # enter the name of an existing NIC
+    pubip: # Set to static or dynamic if you want a public IP, Default is disabled
 
 ```
 
@@ -78,6 +78,7 @@ Example Playbook
             vm_username: "TempAdmin"
             vm_password:  "YouShouldntUseClearTextPasswords@!"
             avset_name: "myavset4"
+            pubip: "static"
 
           - name: SecondGreatVm
             size: "Standard_D4s_v3"
