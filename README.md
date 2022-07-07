@@ -12,6 +12,14 @@ Requirements
 
 Requires Azure_rm Module
 ansible >=2.8
+Tested in Ansible 2.13.1 
+
+Install the Azure Collection from Galaxy:
+
+ansible-galaxy collection install azure.azcollection
+Install the Python requirement packages from the collection
+
+sudo pip3 install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
 
 User Defined Role Variables
 --------------

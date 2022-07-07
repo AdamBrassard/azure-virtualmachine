@@ -1,19 +1,19 @@
 ---
 # tasks file for azure-virtualmachine
-- name: Virtual Machine (VM) Create or Update
+- name: Virtual Machine Create or Update
   azure_rm_virtualmachine:
     name: "{{ item.name }}"
     location: "{{ location }}"
     resource_group: "{{ resource_group }}"
-    vm_size: "{{ item.size | default(omit, true) }}" #Sizing of VM
+    vm_size: "{{ item.size | default(omit, true) }}" # Sizing of VM
     network_interfaces: "{{ item.nic_name | default(omit, true) }}"
-    admin_username: "{{ item.vm_username | default(omit, true) }}" #azureuser
-    admin_password: "{{ item.vm_password | default(omit, true) }}" #Based on Password policy
-    os_type: "{{ item.os_type | default(omit, true) }}" #Windows or Linux
+    admin_username: "{{ item.vm_username | default(omit, true) }}" # azureuser
+    admin_password: "{{ item.vm_password | default(omit, true) }}" # Based on Password policy
+    os_type: "{{ item.os_type | default(omit, true) }}" # Windows or Linux
     # Variables with the default filter only need to be specified when different from default values
     os_disk_size_gb: "{{ item.os_disk_size_gb | default(omit, true) }}"
     os_disk_caching: "{{ item.os_disk_caching | default(omit, true) }}"
-    managed_disk_type: "{{ item.managed_disk_type | default(omit, true) }}" #Standard_LRS, StandardSSD_LRS or Premium_LRS
+    managed_disk_type: "{{ item.managed_disk_type | default(omit, true) }}" # Standard_LRS, StandardSSD_LRS or Premium_LRS
     image:
       offer: "{{ item.offer | default(omit, true) }}"
       publisher: "{{ item.publisher | default(omit, true) }}"
