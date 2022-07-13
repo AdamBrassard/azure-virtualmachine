@@ -1,8 +1,6 @@
 Create/Update VM in Azure
 =========
 
-[![Build Status](https://travis-ci.org/AdamBrassard/azure-virtualmachine.svg?branch=master)](https://travis-ci.org/AdamBrassard/azure-virtualmachine)
-
 This Role creates/updates VM(s) in Azure
 
 <https://docs.ansible.com/ansible/latest/modules/azure_rm_virtualmachine_module.html>
@@ -10,9 +8,9 @@ This Role creates/updates VM(s) in Azure
 Requirements
 ------------
 
-Requires Azure_rm Module
-ansible >=2.8
-Tested in Ansible 2.13.1 
+Requires Azure_rm Module \
+ansible >=2.8 \
+Tested in Ansible 2.13.1
 
 **Install the Azure Collection from Galaxy:**
 ```
@@ -48,6 +46,7 @@ vm:
     avset_name: # Define an availability set if desired. else this will be ignored
     nic_name: # enter the name of an existing NIC
     pubip: # Set to static or dynamic if you want a public IP, Default is disabled
+    subnet_name: # Name of the subnet to create the vm, there can be multiple and different for each VM. module for VM defaults to existing first subnet.
 
 ```
 
